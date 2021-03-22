@@ -13,6 +13,8 @@ module.exports = {
       addStyleResource(config.module.rule("stylus").oneOf(type))
     );
   },
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/uidesigndaily-kit/" : "/",
 };
 
 function addStyleResource(rule) {
