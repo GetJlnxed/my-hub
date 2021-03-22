@@ -1,19 +1,30 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="container fluid container--column">
+    <header class="app-header container">
+      <p class="text text--h4">UIDESIGNDAILY KIT</p>
+    </header>
+
     <router-view />
+
+    <footer class="app-footer">
+      <p class="text">footer</p>
+    </footer>
   </div>
 </template>
 
 <style lang="stylus">
+.app-header
+  height 20%
+  background-color $color-bg-secondary
+  padding 2rem 4rem
+
+.app-footer
+  margin-top auto
+  height 10%
+  padding 2rem 4rem
+  background-color $color-bg-secondary
+
 #app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+  background-color $color-bg-primary
+  min-height 100vh
 </style>
