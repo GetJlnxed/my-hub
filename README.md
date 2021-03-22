@@ -1,5 +1,6 @@
 # uidesigndaily-kit
 
+https://getjlnxed.github.io/uidesigndaily-kit/
 ## Project setup
 ```
 npm install
