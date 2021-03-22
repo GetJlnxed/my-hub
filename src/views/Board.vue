@@ -57,6 +57,16 @@
     grid-column-start 2
     grid-column-end 5
 
-  .sliders .slider
+  .sliders
+    background-color #ebebf3
+    height 200px
+    display flex
+    flex-flow column
+    align-items center
+    justify-content center
+    padding 2rem
+    border-radius 15px
+
+  & .slider
     margin 1rem 0
 </style>
