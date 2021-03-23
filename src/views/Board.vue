@@ -11,8 +11,25 @@
     </div>
     <div class="box sliders">
       <AppSlider :minValue="10" :maxValue="100" :value="25" />
-      <AppSlider :minValue="10" :maxValue="100" :value="50" />
-      <AppSlider :minValue="10" :maxValue="100" :value="100" />
+      <AppSlider :minValue="10" :maxValue="100" :value="50" :bold="true" />
+      <AppSlider :minValue="10" :maxValue="100" :value="100" :disabled="true" />
+    </div>
+    <div class="box checks container container--row align-center justify-center">
+      <div class="container container--column check-container align-center justify-center">
+        <SwitchCheck :background="false" />
+      </div>
+      <div class="container container--column check-container align-center justify-center">
+        <SwitchCheck checked />
+      </div>
+      <div class="container container--column check-container align-center justify-center">
+        <SwitchCheck stretch />
+      </div>
+      <div class="container container--column check-container align-center justify-center">
+        <SwitchCheck squared />
+      </div>
+      <div class="container container--column check-container align-center justify-center">
+        <SwitchCheck squared stretch checked />
+      </div>
     </div>
   </div>
 </template>
@@ -22,6 +39,7 @@
   import AppCard from "@/components/AppCard";
   import Search from "@/components/Search";
   import AppSlider from "@/components/AppSlider";
+  import SwitchCheck from "@/components/SwitchCheck";
 
   export default {
     name: "Board",
@@ -30,6 +48,7 @@
       AppCard,
       Search,
       AppSlider,
+      SwitchCheck,
     },
   };
 </script>
@@ -69,4 +88,17 @@
 
   & .slider
     margin 1rem 0
+
+  .checks
+    background-color #EBEBF3
+    border-radius 5px
+    height 400px
+
+  .check-container
+    padding 1rem
+    background-color #ffffff
+    width 100px
+    height 100px
+    margin 0.5rem
+    border-radius 15px
 </style>
