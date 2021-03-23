@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Board from "@/views/Board";
+import nBoard from "@/views/nBoard";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/board",
     name: "Board",
     component: Board,
+  },
+  {
+    path: "/nboard",
+    name: "nBoard",
+    component: nBoard,
   },
 ];
 
