@@ -56,11 +56,8 @@
 <style lang="stylus" scoped>
   .board
     display grid
-    grid-template-columns repeat(4, 1fr)
     padding 2rem
-
-    & .box
-      margin 2rem
+    grid-gap 3rem
 
   .app-card
     grid-column-start 1
