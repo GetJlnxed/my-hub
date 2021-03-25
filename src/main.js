@@ -9,6 +9,7 @@ import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import { faFileUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+import "@/components/global";
 library.add(faFolder, faUpload, faFileUpload);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
