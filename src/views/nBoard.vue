@@ -1,9 +1,9 @@
 <template>
   <div class="container fluid container--column">
     <v-row>
-      <v-col cols="3"><AppCard /></v-col>
-      <v-col cols="2"><AppMenu /></v-col>
-      <v-col cols="2"><AppMenu /></v-col>
+      <v-col><AppCard /></v-col>
+      <v-col><AppMenu /></v-col>
+      <v-col><AppMenu /></v-col>
     </v-row>
     <v-row>
       <v-col cols="8"><Search /></v-col>
