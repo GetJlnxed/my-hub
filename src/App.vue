@@ -15,16 +15,16 @@
 <style lang="stylus">
 .app-header
   height 20%
-  background-color $color-bg-secondary
+  background-color $color-mostly-black
   padding 2rem 4rem
 
 .app-footer
   margin-top auto
   height 10%
   padding 2rem 4rem
-  background-color $color-bg-secondary
+  background-color $color-mostly-black
 
 #app
-  background-color $color-bg-primary
+  background-color $color-very-dark
   min-height 100vh
 </style>

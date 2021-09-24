@@ -14,32 +14,14 @@
       <AppSlider :minValue="10" :maxValue="100" :value="50" :bold="true" />
       <AppSlider :minValue="10" :maxValue="100" :value="100" :disabled="true" />
     </div>
-    <div class="box checks container container--row align-center justify-center">
-      <div class="container container--column check-container align-center justify-center">
-        <SwitchCheck :background="false" />
-      </div>
-      <div class="container container--column check-container align-center justify-center">
-        <SwitchCheck checked />
-      </div>
-      <div class="container container--column check-container align-center justify-center">
-        <SwitchCheck stretch />
-      </div>
-      <div class="container container--column check-container align-center justify-center">
-        <SwitchCheck squared />
-      </div>
-      <div class="container container--column check-container align-center justify-center">
-        <SwitchCheck squared stretch checked />
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import AppMenu from "@/components/AppMenu";
-import AppCard from "@/components/AppCard";
-import Search from "@/components/Search";
-import AppSlider from "@/components/AppSlider";
-import SwitchCheck from "@/components/SwitchCheck";
+import AppMenu from "@/components/menu/menu";
+import AppCard from "@/components/card";
+import Search from "@/components/search";
+import AppSlider from "@/components/slider";
 
 export default {
   name: "Board",
@@ -48,7 +30,6 @@ export default {
     AppCard,
     Search,
     AppSlider,
-    SwitchCheck,
   },
 };
 </script>

@@ -1,33 +1,103 @@
 <template>
   <div class="container fluid container--column">
     <v-row>
-      <v-col><AppCard /></v-col>
-      <v-col><AppMenu /></v-col>
-      <v-col><AppMenu /></v-col>
+      <v-col><Card /></v-col>
+      <v-col><Menu /></v-col>
+      <v-col>
+        <div class="case container container--column">
+          <div class="container align-center" v-for="input in inputs" :key="input.id">
+            <p class="input-value text">{{ input.value }}</p>
+            <Slider
+              :minValue="input.min"
+              :maxValue="input.max"
+              v-model="input.value"
+              :disabled="input.disabled"
+              :bold="input.bold"
+            />
+          </div>
+        </div>
+      </v-col>
     </v-row>
     <v-row>
       <v-col cols="8"><Search /></v-col>
-      <v-col><AppSlider /></v-col>
-      <v-col><SwitchCheck /></v-col>
     </v-row>
   </div>
 </template>
 
 <script>
-import AppMenu from "@/components/AppMenu";
-import AppCard from "@/components/AppCard";
-import Search from "@/components/Search";
-import AppSlider from "@/components/AppSlider";
-import SwitchCheck from "@/components/SwitchCheck";
+import Menu from "@/components/menu/menu";
+import Card from "@/components/card";
+import Search from "@/components/search";
+import Slider from "@/components/slider";
 
 export default {
   name: "nBoard",
   components: {
-    AppMenu,
-    AppCard,
+    Menu,
+    Card,
     Search,
-    AppSlider,
-    SwitchCheck,
+    Slider,
+  },
+  data() {
+    return {
+      inputs: [
+        {
+          id: 0,
+          min: 0,
+          max: 100,
+          value: 30,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 1,
+          min: 30,
+          max: 100,
+          value: 60,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 2,
+          min: 60,
+          max: 100,
+          value: 90,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 3,
+          min: 0,
+          max: 100,
+          value: 50,
+          disabled: false,
+          bold: true,
+        },
+        {
+          id: 4,
+          min: 0,
+          max: 100,
+          value: 100,
+          disabled: true,
+          bold: true,
+        },
+      ],
+      test: 54,
+    };
   },
 };
 </script>
+
+<style lang="stylus" scoped>
+.case
+  background-color $color-mostly-black
+  padding 25px
+  border-radius 10px
+
+.slider
+  margin 30px 0
+
+.input-value
+  margin-right 10px
+  width 25px
+</style>

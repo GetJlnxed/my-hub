@@ -3,6 +3,7 @@ input.slider(
   type="range",
   :min="minValue",
   :max="maxValue",
+  @input="inputHandler",
   v-model="currentValue",
   :style="{ background: background }",
   :disabled="disabled",
@@ -25,7 +26,7 @@ export default {
   },
   props: {
     value: {
-      type: Number,
+      type: [Number, String],
       default: 0,
       required: false,
     },
@@ -48,6 +49,11 @@ export default {
       type: Boolean,
       default: false,
       required: false,
+    },
+  },
+  methods: {
+    inputHandler(event) {
+      this.$emit("input", event.target.value);
     },
   },
   computed: {

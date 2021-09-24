@@ -2,19 +2,19 @@
 .app-menu.container.container--column.justify-space-around
   button.button.app-menu__button
     | Add new
-  AppRow(:icon="['fas', 'file-upload']", title="Upload files")
-  AppRow(:icon="['fas', 'upload']", title="Upload files")
-  AppRow(:icon="['fas', 'folder']", title="New folder")
-  AppRow(title="Exit")
+  MenuRow(:icon="['fas', 'file-upload']", title="Upload files")
+  MenuRow(:icon="['fas', 'upload']", title="Upload files")
+  MenuRow(:icon="['fas', 'folder']", title="New folder")
+  MenuRow(title="Exit")
 </template>
 
 <script>
-import AppRow from "@/components/AppRow";
+import MenuRow from "@/components/menu/menu-row";
 
 export default {
   name: "AppMenu",
   components: {
-    AppRow,
+    MenuRow,
   },
 };
 </script>
