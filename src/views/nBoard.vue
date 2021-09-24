@@ -14,20 +14,20 @@
 </template>
 
 <script>
-  import AppMenu from "@/components/AppMenu";
-  import AppCard from "@/components/AppCard";
-  import Search from "@/components/Search";
-  import AppSlider from "@/components/AppSlider";
-  import SwitchCheck from "@/components/SwitchCheck";
+import AppMenu from "@/components/AppMenu";
+import AppCard from "@/components/AppCard";
+import Search from "@/components/Search";
+import AppSlider from "@/components/AppSlider";
+import SwitchCheck from "@/components/SwitchCheck";
 
-  export default {
-    name: "nBoard",
-    components: {
-      AppMenu,
-      AppCard,
-      Search,
-      AppSlider,
-      SwitchCheck,
-    },
-  };
+export default {
+  name: "nBoard",
+  components: {
+    AppMenu,
+    AppCard,
+    Search,
+    AppSlider,
+    SwitchCheck,
+  },
+};
 </script>

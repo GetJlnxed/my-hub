@@ -7,6 +7,6 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "always",
-  "vueIndentScriptAndStyle": true,
+  "vueIndentScriptAndStyle": false,
   "semi": true
 }

@@ -35,67 +35,67 @@
 </template>
 
 <script>
-  import AppMenu from "@/components/AppMenu";
-  import AppCard from "@/components/AppCard";
-  import Search from "@/components/Search";
-  import AppSlider from "@/components/AppSlider";
-  import SwitchCheck from "@/components/SwitchCheck";
+import AppMenu from "@/components/AppMenu";
+import AppCard from "@/components/AppCard";
+import Search from "@/components/Search";
+import AppSlider from "@/components/AppSlider";
+import SwitchCheck from "@/components/SwitchCheck";
 
-  export default {
-    name: "Board",
-    components: {
-      AppMenu,
-      AppCard,
-      Search,
-      AppSlider,
-      SwitchCheck,
-    },
-  };
+export default {
+  name: "Board",
+  components: {
+    AppMenu,
+    AppCard,
+    Search,
+    AppSlider,
+    SwitchCheck,
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
-  .board
-    display grid
-    padding 2rem
-    grid-gap 3rem
+.board
+  display grid
+  padding 2rem
+  grid-gap 3rem
 
-  .app-card
-    grid-column-start 1
-    grid-row-start 1
-    grid-row-end 3
+.app-card
+  grid-column-start 1
+  grid-row-start 1
+  grid-row-end 3
 
-  .app-menu
-    grid-row-start 2
-    grid-column-start 2
+.app-menu
+  grid-row-start 2
+  grid-column-start 2
 
-  .search
-    grid-row-start 1
-    grid-column-start 2
-    grid-column-end 5
+.search
+  grid-row-start 1
+  grid-column-start 2
+  grid-column-end 5
 
-  .sliders
-    background-color #ebebf3
-    height 200px
-    display flex
-    flex-flow column
-    align-items center
-    justify-content center
-    padding 2rem
-    border-radius 15px
+.sliders
+  background-color #ebebf3
+  height 200px
+  display flex
+  flex-flow column
+  align-items center
+  justify-content center
+  padding 2rem
+  border-radius 15px
 
-  & .slider
-    margin 1rem 0
+& .slider
+  margin 1rem 0
 
-  .checks
-    background-color #EBEBF3
-    border-radius 5px
-    height 400px
+.checks
+  background-color #EBEBF3
+  border-radius 5px
+  height 400px
 
-  .check-container
-    padding 1rem
-    background-color #ffffff
-    width 100px
-    height 100px
-    margin 0.5rem
-    border-radius 15px
+.check-container
+  padding 1rem
+  background-color #ffffff
+  width 100px
+  height 100px
+  margin 0.5rem
+  border-radius 15px
 </style>
