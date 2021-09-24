@@ -33,6 +33,7 @@
     flex-basis 0%
     flex-grow 1
     max-width 100%
+    padding 12px
 
   .col-1
     flex 0 0 8.3333333333%
