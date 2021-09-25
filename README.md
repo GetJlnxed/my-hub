@@ -1,6 +1,6 @@
-# uidesigndaily-kit
+# my-hub
 
-https://getjlnxed.github.io/uidesigndaily-kit/
+https://getjlnxed.github.io/my-hub/
 
 ## Project setup
 
