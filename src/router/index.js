@@ -11,7 +11,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    redirect: { name: "nBoard" },
+    /* redirect: { name: "nBoard" }, */
   },
   {
     path: "/board",
