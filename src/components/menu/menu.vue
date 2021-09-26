@@ -1,7 +1,7 @@
 <template lang="pug">
 .app-menu.container.container--column.justify-space-around
   button.button.app-menu__button
-    | Add new
+    | Ad. new
   MenuRow(:icon="['fas', 'file-upload']", title="Upload files")
   MenuRow(:icon="['fas', 'upload']", title="Upload files")
   MenuRow(:icon="['fas', 'folder']", title="New folder")
