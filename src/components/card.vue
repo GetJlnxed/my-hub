@@ -120,4 +120,8 @@ export default {
 .card__subtitle
   color #7C8494
   margin-top 20px
+
+@media (max-width $xs-large)
+  .card
+    min-width 200px
 </style>

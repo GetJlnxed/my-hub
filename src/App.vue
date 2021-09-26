@@ -9,7 +9,7 @@
       <div class="links container">
         <button class="links__button button" @click="$router.push({ name: 'Board' })">Board</button>
         <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
-        <button class="links__button button">Contacts</button>
+        <a href="https://getjlnxed.github.io/my-page/" class="links__button button" target="_blank">About</a>
       </div>
     </header>
 
@@ -64,4 +64,13 @@ export default {
 #app
   background-color $color-black
   min-height 100vh
+
+@media (max-width $xs-large)
+  .app-header
+    padding 1rem 2rem
+
+@media (max-width $xs)
+  .app-header
+    flex-flow column
+    align-items center
 </style>

@@ -8,7 +8,7 @@
         <div class="links container container--row align-center justify-center">
           <button class="links__button button" @click="$router.push({ name: 'Board' })">Board</button>
           <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
-          <button class="links__button button">Contacts</button>
+          <a href="https://getjlnxed.github.io/my-page/" class="links__button button" target="_blank">About</a>
         </div>
       </transition>
     </div>

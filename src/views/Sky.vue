@@ -56,19 +56,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+$color-sky-background = #3D1C51
+$color-star = #00aff0
+
 .sky
   width 100%
   height 100%
-  background #3D1C51
+  background $color-sky-background
   position relative
 
   .star
     box-sizing border-box
     position absolute
-    background #ffffff
+    background $color-white
     border-radius 50%
-    box-shadow 0px 0px 4px 0px #00aff0
-
+    box-shadow 0px 0px 4px 0px $color-star
     animation-iteration-count infinite
     animation-name zoom_out
 
@@ -81,13 +83,13 @@ export default {
 @keyframes zoom_out
   0%
     transform scale(1)
-    box-shadow 0px 0px 4px 0px #00aff0
+    box-shadow 0px 0px 4px 0px $color-star
 
   50%
     transform scale(0.5)
-    box-shadow 0px 0px 4px 2px #00aff0
+    box-shadow 0px 0px 4px 2px $color-star
 
   100%
     transform scale(1)
-    box-shadow 0px 0px 4px 0px #00aff0
+    box-shadow 0px 0px 4px 0px $color-star
 </style>

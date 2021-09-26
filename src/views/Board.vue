@@ -1,6 +1,6 @@
 <template>
   <transition name="fade" appear>
-    <div class="container fluid container--column" v-show="pageVisible">
+    <div class="board container nowrap container--column" v-show="pageVisible">
       <v-row>
         <v-col><Card /></v-col>
         <v-col><Menu /></v-col>
@@ -93,6 +93,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.board
+  background-color $color-black
+
 .case
   background-color $color-mostly-black
   padding 25px
@@ -104,4 +107,8 @@ export default {
 .input-value
   margin-right 10px
   width 25px
+
+@media (max-width $xs-large) {
+
+}
 </style>
