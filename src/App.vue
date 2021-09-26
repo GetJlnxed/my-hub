@@ -7,7 +7,7 @@
     >
       <p @click="$router.push({ name: 'Home' })" class="app-header__title text text--h4">HUB</p>
       <div class="links container">
-        <button class="links__button button" @click="$router.push({ name: 'nBoard' })">Board</button>
+        <button class="links__button button" @click="$router.push({ name: 'Board' })">Board</button>
         <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
         <button class="links__button button">Contacts</button>
       </div>

@@ -1,82 +1,107 @@
 <template>
-  <div class="board">
-    <div class="box app-card">
-      <AppCard :dark="true" />
+  <transition name="fade" appear>
+    <div class="container fluid container--column" v-show="pageVisible">
+      <v-row>
+        <v-col><Card /></v-col>
+        <v-col><Menu /></v-col>
+        <v-col>
+          <div class="case container container--column">
+            <div class="container align-center" v-for="input in inputs" :key="input.id">
+              <p class="input-value text">{{ input.value }}</p>
+              <Slider
+                :minValue="input.min"
+                :maxValue="input.max"
+                v-model="input.value"
+                :disabled="input.disabled"
+                :bold="input.bold"
+              />
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="8"><Search /></v-col>
+      </v-row>
     </div>
-    <div class="box app-menu">
-      <AppMenu />
-    </div>
-    <div class="box search">
-      <Search />
-    </div>
-    <div class="box sliders">
-      <AppSlider :minValue="10" :maxValue="100" :value="25" />
-      <AppSlider :minValue="10" :maxValue="100" :value="50" :bold="true" />
-      <AppSlider :minValue="10" :maxValue="100" :value="100" :disabled="true" />
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script>
-import AppMenu from "@/components/menu/menu";
-import AppCard from "@/components/card";
+import Menu from "@/components/menu/menu";
+import Card from "@/components/card";
 import Search from "@/components/search";
-import AppSlider from "@/components/slider";
+import Slider from "@/components/slider";
+
+import { appear } from "@/components/mixins/appear";
 
 export default {
-  name: "Board",
+  name: "nBoard",
+  mixins: [appear],
   components: {
-    AppMenu,
-    AppCard,
+    Menu,
+    Card,
     Search,
-    AppSlider,
+    Slider,
+  },
+  data() {
+    return {
+      inputs: [
+        {
+          id: 0,
+          min: 0,
+          max: 100,
+          value: 30,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 1,
+          min: 30,
+          max: 100,
+          value: 60,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 2,
+          min: 60,
+          max: 100,
+          value: 90,
+          disabled: false,
+          bold: false,
+        },
+        {
+          id: 3,
+          min: 0,
+          max: 100,
+          value: 50,
+          disabled: false,
+          bold: true,
+        },
+        {
+          id: 4,
+          min: 0,
+          max: 100,
+          value: 100,
+          disabled: true,
+          bold: true,
+        },
+      ],
+    };
   },
 };
 </script>
 
 <style lang="stylus" scoped>
-.board
-  display grid
-  padding 2rem
-  grid-gap 3rem
+.case
+  background-color $color-mostly-black
+  padding 25px
+  border-radius 10px
 
-.app-card
-  grid-column-start 1
-  grid-row-start 1
-  grid-row-end 3
+.slider
+  margin 30px 0
 
-.app-menu
-  grid-row-start 2
-  grid-column-start 2
-
-.search
-  grid-row-start 1
-  grid-column-start 2
-  grid-column-end 5
-
-.sliders
-  background-color #ebebf3
-  height 200px
-  display flex
-  flex-flow column
-  align-items center
-  justify-content center
-  padding 2rem
-  border-radius 15px
-
-& .slider
-  margin 1rem 0
-
-.checks
-  background-color #EBEBF3
-  border-radius 5px
-  height 400px
-
-.check-container
-  padding 1rem
-  background-color #ffffff
-  width 100px
-  height 100px
-  margin 0.5rem
-  border-radius 15px
+.input-value
+  margin-right 10px
+  width 25px
 </style>

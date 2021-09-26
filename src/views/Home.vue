@@ -6,7 +6,7 @@
       </transition>
       <transition v-if="isTitleAppeared" name="fade" appear>
         <div class="links container container--row align-center justify-center">
-          <button class="links__button button" @click="$router.push({ name: 'nBoard' })">Board</button>
+          <button class="links__button button" @click="$router.push({ name: 'Board' })">Board</button>
           <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
           <button class="links__button button">Contacts</button>
         </div>
