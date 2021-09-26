@@ -26,7 +26,7 @@ export default {
       sky: {
         star_count: 330,
         minWidth: 1,
-        maxWidth: 5,
+        maxWidth: 15,
         stars: [],
       },
     };
