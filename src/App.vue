@@ -1,10 +1,14 @@
 <template>
   <div id="app" class="container fluid container--column nowrap">
-    <header class="app-header container" v-if="route.fullPath !== '/'">
+    <header
+      class="app-header container"
+      v-if="route.fullPath !== '/'"
+      :class="{ 'app-header--starred': route.path === '/sky' }"
+    >
       <p @click="$router.push({ name: 'Home' })" class="app-header__title text text--h4">HUB</p>
       <div class="links container">
         <button class="links__button button" @click="$router.push({ name: 'nBoard' })">Board</button>
-        <button class="links__button button">Sky</button>
+        <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
         <button class="links__button button">Contacts</button>
       </div>
     </header>
@@ -24,15 +28,14 @@ export default {
     route() {
       return this.$route;
     },
+    /*     isSkyPage() {
+      this.
+    } */
   },
 };
 </script>
 
 <style lang="stylus">
-.app-header__title
-  user-select none
-  cursor pointer
-
 .links
   margin-left 15px
 
@@ -43,6 +46,14 @@ export default {
   height 20%
   background-color $color-mostly-black
   padding 2rem 4rem
+  transition background-color 0.5s
+
+  .app-header__title
+    user-select none
+    cursor pointer
+
+  &--starred
+    background-color #3D1C51
 
 .app-footer
   margin-top auto

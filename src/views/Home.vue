@@ -1,21 +1,26 @@
 <template>
-  <div class="home container container--column fluid align-center justify-center">
-    <transition name="fade" appear @after-appear="titleAppeared">
-      <p class="home__title text text--h4">Welcome to my hub</p>
-    </transition>
-    <transition v-if="isTitleAppeared" name="fade" appear>
-      <div class="links container container--row align-center justify-center">
-        <button class="links__button button" @click="$router.push({ name: 'nBoard' })">Board</button>
-        <button class="links__button button">Sky</button>
-        <button class="links__button button">Contacts</button>
-      </div>
-    </transition>
-  </div>
+  <transition name="fade" appear>
+    <div class="home container container--column fluid align-center justify-center" v-show="pageVisible">
+      <transition name="fade" appear @after-appear="titleAppeared">
+        <p class="home__title text text--h4">Welcome to my hub</p>
+      </transition>
+      <transition v-if="isTitleAppeared" name="fade" appear>
+        <div class="links container container--row align-center justify-center">
+          <button class="links__button button" @click="$router.push({ name: 'nBoard' })">Board</button>
+          <button class="links__button button" @click="$router.push({ name: 'Sky' })">Sky</button>
+          <button class="links__button button">Contacts</button>
+        </div>
+      </transition>
+    </div>
+  </transition>
 </template>
 
 <script>
+import { appear } from "@/components/mixins/appear";
+
 export default {
   name: "Home",
+  mixins: [appear],
   data() {
     return {
       isTitleAppeared: false,

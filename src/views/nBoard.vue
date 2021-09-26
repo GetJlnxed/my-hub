@@ -1,27 +1,29 @@
 <template>
-  <div class="container fluid container--column">
-    <v-row>
-      <v-col><Card /></v-col>
-      <v-col><Menu /></v-col>
-      <v-col>
-        <div class="case container container--column">
-          <div class="container align-center" v-for="input in inputs" :key="input.id">
-            <p class="input-value text">{{ input.value }}</p>
-            <Slider
-              :minValue="input.min"
-              :maxValue="input.max"
-              v-model="input.value"
-              :disabled="input.disabled"
-              :bold="input.bold"
-            />
+  <transition name="fade" appear>
+    <div class="container fluid container--column" v-show="pageVisible">
+      <v-row>
+        <v-col><Card /></v-col>
+        <v-col><Menu /></v-col>
+        <v-col>
+          <div class="case container container--column">
+            <div class="container align-center" v-for="input in inputs" :key="input.id">
+              <p class="input-value text">{{ input.value }}</p>
+              <Slider
+                :minValue="input.min"
+                :maxValue="input.max"
+                v-model="input.value"
+                :disabled="input.disabled"
+                :bold="input.bold"
+              />
+            </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="8"><Search /></v-col>
-    </v-row>
-  </div>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="8"><Search /></v-col>
+      </v-row>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -30,8 +32,11 @@ import Card from "@/components/card";
 import Search from "@/components/search";
 import Slider from "@/components/slider";
 
+import { appear } from "@/components/mixins/appear";
+
 export default {
   name: "nBoard",
+  mixins: [appear],
   components: {
     Menu,
     Card,
@@ -82,7 +87,6 @@ export default {
           bold: true,
         },
       ],
-      test: 54,
     };
   },
 };
