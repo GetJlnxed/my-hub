@@ -36,6 +36,7 @@ export default {
   },
   methods: {
     createStars() {
+      alert(this.sky.minWidth);
       let sky = this.$refs.sky;
       let w = sky.clientWidth - 10;
       let h = sky.clientHeight - 10;
