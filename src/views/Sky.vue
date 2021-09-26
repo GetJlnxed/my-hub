@@ -68,7 +68,7 @@ export default {
     background #ffffff
     border-radius 50%
     box-shadow 0px 0px 4px 0px #00aff0
-    border 4px dotted '#EEEEEE'
+
     animation-iteration-count infinite
     animation-name zoom_out
 
