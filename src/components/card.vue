@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: "AppCard",
+  name: "Card",
   data() {
     return {
       isDark: false,

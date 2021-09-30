@@ -37,6 +37,7 @@ import { appear } from "@/components/mixins/appear";
 export default {
   name: "nBoard",
   mixins: [appear],
+  inject: ["windowSize"],
   components: {
     Menu,
     Card,
@@ -108,7 +109,7 @@ export default {
   margin-right 10px
   width 25px
 
-@media (max-width $xs-large) {
+/* @media (max-width $xs-large) {
 
-}
+} */
 </style>

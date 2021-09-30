@@ -12,7 +12,7 @@
 import MenuRow from "@/components/menu/menu-row";
 
 export default {
-  name: "AppMenu",
+  name: "Menu",
   components: {
     MenuRow,
   },

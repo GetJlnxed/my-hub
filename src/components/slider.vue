@@ -13,7 +13,7 @@ input.slider(
 
 <script>
 export default {
-  name: "AppSlider",
+  name: "Slider",
   data() {
     return {
       currentValue: 0,

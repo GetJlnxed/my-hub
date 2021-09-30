@@ -15,6 +15,21 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
+// breakpoints
+
+/* window.addEventListener("resize", function () {
+  Vue.prototype.$breakpoint = 400;
+  Vue.prototype.$breakpoint = setWidth(this.innerWidth);
+});
+
+function setWidth(width) {
+  if (width > 1600) return "xlg";
+  else if (width < 1600 && width > 1366) return "lg";
+  else if (width < 1366 && width > 1280) return "lg";
+  else if (width < 1280 && width > 1024) return "md";
+  else if (width < 1024 && width > 768) return "tab";
+} */
+
 new Vue({
   router,
   store,

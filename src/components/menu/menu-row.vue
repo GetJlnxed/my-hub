@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "AppRow",
+  name: "MenuRow",
   props: {
     icon: {
       type: Array,

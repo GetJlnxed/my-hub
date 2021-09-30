@@ -21,6 +21,7 @@ function getRandomArbitrary(min, max) {
 export default {
   name: "Sky",
   mixins: [appear],
+  inject: ["windowSize"],
   data() {
     return {
       sky: {

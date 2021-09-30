@@ -2,8 +2,8 @@
   <div id="app" class="container fluid container--column nowrap">
     <header
       class="app-header container"
-      v-if="route.fullPath !== '/'"
-      :class="{ 'app-header--starred': route.path === '/sky' }"
+      v-if="isHeaderVisible"
+      :class="{ 'app-header--starred': $route.path === '/sky' }"
     >
       <p @click="$router.push({ name: 'Home' })" class="app-header__title text text--h4">HUB</p>
       <div class="links container">
@@ -14,23 +14,55 @@
     </header>
 
     <router-view />
-
+    <!-- <button @click="test"></button> -->
     <!-- <footer class="app-footer">
-      <p class="text">footer</p>
+      <p class="text">{{ windowSize.breakpoint }}</p>
+      <p class="text">{{ windowSize.width }}</p>
     </footer> -->
   </div>
 </template>
 
 <script>
+function setWidth(width) {
+  if (width > 1600) return "xlg";
+  else if (width < 1600 && width > 1366) return "lg";
+  else if (width < 1366 && width > 1280) return "lg";
+  else if (width < 1280 && width > 1024) return "tab";
+  else if (width < 1024 && width > 768) return "tab2";
+}
+
 export default {
   name: "App",
-  computed: {
-    route() {
-      return this.$route;
+  provide() {
+    return {
+      windowSize: this.windowSize,
+    };
+  },
+  data() {
+    return {
+      windowSize: {
+        width: 0,
+        breakpoint: null,
+      },
+    };
+  },
+  mounted() {
+    this.setWindowSize();
+    window.addEventListener("resize", this.setWindowSize);
+  },
+  methods: {
+    setWindowSize() {
+      this.windowSize.breakpoint = setWidth(window.innerWidth);
+      this.windowSize.width = window.innerWidth;
     },
-    /*     isSkyPage() {
-      this.
-    } */
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.setWindowSize);
+  },
+  computed: {
+    isHeaderVisible() {
+      return this.$route.fullPath !== "/" /* && this.$route.fullPath !== "/panel" */;
+    },
   },
 };
 </script>
