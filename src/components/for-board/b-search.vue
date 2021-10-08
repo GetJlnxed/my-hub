@@ -1,17 +1,17 @@
 <template lang="pug">
-.search.container(:class="{ 'search--focused': focused }")
-  input.search__input(
+.b-search.container(:class="{ 'b-search--focused': focused }")
+  input.b-search__input(
     name="input",
     @focus="focusHandler",
     @blur="blurHandler",
     v-model="inputValue"
   )
-  label.search__label.text.text--bold(
+  label.b-search__label.text.text--bold(
     for="input",
-    :class="{ 'search__label--hidden': isLabelInvisible }"
+    :class="{ 'b-search__label--hidden': isLabelInvisible }"
   )
     | Search
-  button.search__button.button
+  button.b-search__button.button
     | Search
 </template>
 
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.search
+.b-search
   background #dcdfec
   padding 0.5rem 0.5rem 0.5rem 4rem
   border-radius 35px
@@ -52,10 +52,10 @@ export default {
   transition background-color 0.3s
   color #363636
 
-.search--focused
+.b-search--focused
   background-color #ffffff
 
-.search__input
+.b-search__input
   width 90%
   border none
   background transparent
@@ -65,7 +65,7 @@ export default {
   font-weight 700
   z-index 2
 
-.search__label
+.b-search__label
   position absolute
   color #8D95A4
   top calc(25% + 1.2rem / 2)
@@ -76,10 +76,10 @@ export default {
   opacity 1
   z-index 1
 
-.search__label--hidden
+.b-search__label--hidden
   opacity 0
 
-.search__button
+.b-search__button
   margin-left auto
   border-radius inherit
   box-shadow 2px 2px 5px rgba(154, 147, 140, 0.5)
@@ -94,7 +94,7 @@ export default {
     box-shadow inset 2px 2px 5px rgba(154, 147, 140, 0.5)
     color #4a546c
 
-.search--focused .search__button
+.b-search--focused .b-search__button
   &:hover
     background #f1f1f8
 </style>

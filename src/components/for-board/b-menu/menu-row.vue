@@ -1,7 +1,7 @@
 <template lang="pug">
-.app-row.container.align-center
-  font-awesome-icon.app-row__icon(:icon="icon", v-if="icon")
-  p.app-row__link.text.text--bold
+.menu-row.container.align-center
+  font-awesome-icon.menu-row__icon(:icon="icon", v-if="icon")
+  p.menu-row__link.text.text--bold
     | {{ title }}
 </template>
 
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.app-row
+.menu-row
   padding 1rem 10px
   position relative
   border-radius 5px
@@ -49,11 +49,11 @@ export default {
     transform translateX(-1rem)
     opacity 1
 
-.app-row__icon
+.menu-row__icon
   width 1.5rem
   margin-right 1rem
   z-index 2
 
-.app-row__link
+.menu-row__link
   z-index 2
 </style>

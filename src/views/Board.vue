@@ -2,8 +2,8 @@
   <transition name="fade" appear>
     <div class="board container nowrap container--column" v-show="pageVisible">
       <v-row>
-        <v-col><Card /></v-col>
-        <v-col><Menu /></v-col>
+        <v-col><bCard /></v-col>
+        <v-col><bMenu /></v-col>
         <v-col>
           <div class="case container container--column">
             <div class="container align-center" v-for="input in inputs" :key="input.id">
@@ -20,16 +20,23 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col cols="8"><Search /></v-col>
+        <v-col><bSearch /></v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <bCreditCard />
+        </v-col>
       </v-row>
     </div>
   </transition>
 </template>
 
 <script>
-import Menu from "@/components/menu/menu";
-import Card from "@/components/card";
-import Search from "@/components/search";
+import bMenu from "@/components/for-board/b-menu/b-menu";
+import bCard from "@/components/for-board/b-card";
+import bSearch from "@/components/for-board/b-search";
+import bCreditCard from "@/components/for-board/b-credit-card";
+
 import Slider from "@/components/slider";
 
 import { appear } from "@/components/mixins/appear";
@@ -39,10 +46,11 @@ export default {
   mixins: [appear],
   inject: ["windowSize"],
   components: {
-    Menu,
-    Card,
-    Search,
+    bMenu,
+    bCard,
+    bSearch,
     Slider,
+    bCreditCard,
   },
   data() {
     return {

@@ -1,33 +1,33 @@
 <template lang="pug">
-.card.container.container--fluid.container--column(:class="{ dark: isDark, light: !isDark }")
-  .card__header.container.container--column
-    .card__title.text.text--h5.text--bold
+.b-card.container.container--fluid.container--column(:class="{ dark: isDark, light: !isDark }")
+  .b-card__header.container.container--column
+    .b-card__title.text.text--h5.text--bold
       | Free
-    .card__subtitle.text
+    .b-card__subtitle.text
       | for freelancers
   .container
-    p.text.text--h3.text--bold.card__price
+    p.text.text--h3.text--bold.b-card__price
       | $0
-  .container.container--column.card__checks
-    label.check.text.card__check
-      input.check__checkbox.card__checkbox(type="checkbox", name="check", checked, disabled)
+  .container.container--column.b-card__checks
+    label.check.text.b-card__check
+      input.check__checkbox.b-card__checkbox(type="checkbox", name="check", checked, disabled)
       span.check__label.text
         | Perfomance
-    label.check.text.card__check
-      input.check__checkbox.card__checkbox(type="checkbox", name="check", checked, disabled)
+    label.check.text.b-card__check
+      input.check__checkbox.b-card__checkbox(type="checkbox", name="check", checked, disabled)
       span.check__label.text
         | Perfomance
-    label.check.text.card__check
-      input.check__checkbox.card__checkbox(type="checkbox", name="check", checked, disabled)
+    label.check.text.b-card__check
+      input.check__checkbox.b-card__checkbox(type="checkbox", name="check", checked, disabled)
       span.check__label.text
         | Perfomance
-  .button.card__button(@click="changeTheme")
+  .button.b-card__button(@click="changeTheme")
     | Accept
 </template>
 
 <script>
 export default {
-  name: "Card",
+  name: "b-card",
   data() {
     return {
       isDark: false,
@@ -52,13 +52,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.card__price
+.b-card__price
   margin-top 50px
 
-.card__title
+.b-card__title
   color inherit
 
-.card
+.b-card
   min-width 500px
   min-height 700px
   height 90%
@@ -73,7 +73,7 @@ export default {
     padding 0px 40px
     box-sizing border-box
 
-  & .card__checks
+  & .b-card__checks
     margin-top 50px
 
   & .check
@@ -89,10 +89,10 @@ export default {
     color #202842
     background-color #ffffff
 
-    & .card__checkbox:disabled+.check__label::before
+    & .b-card__checkbox:disabled+.check__label::before
       background-color #242C44
 
-    & .card__button
+    & .b-card__button
       background-color #242C44
       color #ffffff
 
@@ -100,28 +100,28 @@ export default {
     color #ffffff
     background-color #242C44
 
-    & .card__button
+    & .b-card__button
       background-color #ffffff
       color #242C44
 
-    & .card__checkbox:disabled+.check__label::before
+    & .b-card__checkbox:disabled+.check__label::before
       background-color #ffffff
 
-    & .card__checkbox:checked+.check__label::before
+    & .b-card__checkbox:checked+.check__label::before
       border-color #0b76ef
       background-color #ffffff
       background-image url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%363636' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
 
-.card__button
+.b-card__button
   border-radius 40px
   text-align center
   margin-top auto
 
-.card__subtitle
+.b-card__subtitle
   color #7C8494
   margin-top 20px
 
 @media (max-width $xs-large)
-  .card
+  .b-card
     min-width 200px
 </style>

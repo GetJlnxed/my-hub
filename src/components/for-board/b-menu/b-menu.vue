@@ -1,6 +1,6 @@
 <template lang="pug">
-.app-menu.container.container--column.justify-space-around
-  button.button.app-menu__button
+.b-menu.container.container--column.justify-space-around
+  button.button.b-menu__button
     | Add new
   MenuRow(:icon="['fas', 'file-upload']", title="Upload files")
   MenuRow(:icon="['fas', 'upload']", title="Upload files")
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import MenuRow from "@/components/menu/menu-row";
+import MenuRow from "./menu-row";
 
 export default {
   name: "Menu",
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.app-menu
+.b-menu
   background-color #241C3C
   min-height 400px
   min-width 250px
@@ -29,7 +29,7 @@ export default {
   color #808ac5
   font-size 1.5rem
 
-.app-menu__button
+.b-menu__button
   border 5px
   color #241C3C
   background-color #FBB135
