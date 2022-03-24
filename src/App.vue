@@ -24,11 +24,13 @@
 
 <script>
 function setWidth(width) {
-  if (width > 1600) return "xlg";
-  else if (width < 1600 && width > 1366) return "lg";
+  if (width > 1600) return "xlg-max";
+  else if (width < 1600 && width > 1366) return "xlg";
   else if (width < 1366 && width > 1280) return "lg";
-  else if (width < 1280 && width > 1024) return "tab";
-  else if (width < 1024 && width > 768) return "tab2";
+  else if (width < 1280 && width > 1024) return "md";
+  else if (width < 1024 && width > 768) return "tablet";
+  else if (width < 768 && width > 480) return "sm";
+  else if (width < 480) return "xs";
 }
 
 export default {

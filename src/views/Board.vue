@@ -4,7 +4,7 @@
       <v-row>
         <v-col><bCard /></v-col>
         <v-col><bMenu /></v-col>
-        <v-col>
+        <v-col :cols="sliderCols">
           <div class="case container container--column">
             <div class="container align-center" v-for="input in inputs" :key="input.id">
               <p class="input-value text">{{ input.value }}</p>
@@ -97,6 +97,12 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    sliderCols() {
+      if (this.windowSize.breakpoint === "xs") return 12;
+      else return 4;
+    },
   },
 };
 </script>

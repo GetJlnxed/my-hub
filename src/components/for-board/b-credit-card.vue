@@ -26,7 +26,7 @@
   border-radius 15px
   display flex
   flex-flow row nowrap
-  width 480px
+  max-width 480px
   padding 25px
   box-sizing border-box
   transition transform 0.5s
